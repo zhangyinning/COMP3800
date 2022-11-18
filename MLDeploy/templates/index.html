@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+     <h1>Loan Approval Prediction</h1>
+     <form action="{{ url_for('predict')}}" method="post">
+         <input type='text' name="LoanAmount" placeholder="LoanAmount" required="required" />
+         <input type='text' name="Credit_History" placeholder="Credit_History" required="required" />
+         <input type='text' name="TotalIncome" placeholder="TotalIncome" required="required" />
+         <button type="submit" class="btn btn-primary btn-block btn-large"> Predict</button>
+     </form>
+
+     <h2>The loan status is: {{predicted_text}}</h2>
+</body>
+</html>
